@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+   
+         
+            <form  method="post" action="/addstudent" enctype="multipart/form-data">
+                <table border="1">
+                    <tr>
+                         <td>enter name:</td>
+                         <td><input type="text" name="name"></td>
+                    </tr>
+                    <tr>
+                        <td>enter age:</td>
+                        <td><input type="text" name="age"></td>
+                   </tr>
+                   <tr>
+                    <td>Gender</td>
+                    <td> 
+                        <input type="radio" name="gender" id="" value="male">Male
+                        <input type="radio" name="gender" id="" value="female">Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hobby</td>
+                    <td>
+                        <input type="checkbox" name="hobby" id="" value="running">Running
+                        <input type="checkbox" name="hobby" id="" value="swiming">swiming
+                        <input type="checkbox" name="hobby" id="" value="music">music
+                    </td>
+                </tr>
+                <tr>
+                    <% var citys = ['Surat','Vapi','bharuch']%>
+                    <td>City</td>
+                    <td>
+                        <select name="citys" id="">
+                            <option value="">---Select City ---</option>
+                            <% citys.map((v)=>{  %>
+                                <option value="<%= v %>"><%= v %></option>
+                            <%})%>   
+                        </select>
+                    </td>
+                </tr>
+
+                     <tr>
+                          <td>uploadimage</td>
+                          <td><input type="file" name="addimage" id=""></td>
+                     </tr>
+                   <tr>
+                    <td></td>
+                    <td><input type="submit" name="submit" value="add data"></td>
+               </tr>
+
+        </table>
+            </form>
+            <a href="/view_details">view data</a>  
+</body>
+</html>

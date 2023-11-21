@@ -1,0 +1,29 @@
+<table border="1">
+    <tr>
+        <td>name</td>
+        <td>age</td>
+        <td>Gender</td>
+        <td>Hobby</td>
+        <td>city</td>
+        <td>img</td>
+        <td>action</td>
+    </tr>
+
+    <% for(var st of stdata) {%>
+        <tr>
+            <td> <%= st.name%></td>
+            <td><%= st.age%></td>
+            <td><%= st.gender %></td>
+            <td><%= st.hobby %></td>
+            <td><%= st.citys %></td>
+            <td><img src="<%= st.adminimg %>" height="100px"/></td>
+            <td>
+                <a href="/deletestudent/<%= st.id%>">Delete</a>|| 
+                <a href="/updatestudent/<%= st.id%>">update</a> 
+               
+            </td>
+        </tr>
+        <% } %>
+
+</table>
+<a href="/">add data</a>  
